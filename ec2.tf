@@ -15,6 +15,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web-server" {
-  ami           = data.aws_ami.ubuntu
-  instance_type = "t3.micro"
+  ami             = data.aws_ami.ubuntu
+  instance_type   = "t3.micro"
+  security_groups = [aws_security_group.web-sg.id]
 }
