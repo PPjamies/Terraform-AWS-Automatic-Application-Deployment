@@ -1,6 +1,7 @@
 resource "aws_security_group" "web-sg" {
   name        = "web-sg"
   description = "Allow HTTP and SSH inbound traffic and all outbound traffic"
+  vpc_id      = aws_vpc.web-vpc.id
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_http" {
