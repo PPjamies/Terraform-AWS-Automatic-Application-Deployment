@@ -31,3 +31,8 @@ variable "ssh_public_key_path" {
   type        = string
   description = "Path to the public key to use for EC2 instance"
 }
+
+variable "ssh_private_key_path" {
+  type        = string
+  description = "Path to the private key to use for EC2 instance"
+}
