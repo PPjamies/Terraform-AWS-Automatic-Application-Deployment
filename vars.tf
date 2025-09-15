@@ -1,3 +1,15 @@
+variable "vpc_cidr_block" {
+  type        = string
+  description = "CIDR block for VPC"
+  default     = "10.0.0.0/16"
+}
+
+variable "subnet_cidr_block" {
+  type        = string
+  description = "CIDR block for VPC"
+  default     = "10.0.1.0/24"
+}
+
 variable "ssh_cidr_blocks" {
   type        = set(string)
   description = "CIDR blocks allowed to SSH"
