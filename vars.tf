@@ -1,3 +1,9 @@
+variable "provider_region" {
+  type        = string
+  description = "AWS provider region"
+  default     = "us-west-2"
+}
+
 variable "vpc_cidr_block" {
   type        = string
   description = "CIDR block for VPC"
